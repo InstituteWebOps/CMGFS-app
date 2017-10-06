@@ -6,7 +6,6 @@ import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,10 +37,10 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-public class nonEateries extends Fragment {
+public class NonEateries extends Fragment {
 
     private static final String QUESTION_URL = "https://polarityreverse.000webhostapp.com/CMGFS/questionsneat.php";
-    private static final String SUBMIT_URL ="https://polarityreverse.000webhostapp.com/CMGFS/nonEateryEval.php" ;
+    private static final String SUBMIT_URL = "https://students.iitm.ac.in/studentsapp/cmgfs/nonEateryEval.php";
     TextView date, shop, q1 , q2 ,q3, q4,q5, q6,q7,q8,q9, link;
     RatingBar rb2,rb3,rb4,rb5, rb6 , rb7, rb8;
     EditText members, phone ,com1,com2,com3,com4,com5,com6, com7, com8,com9;
@@ -56,6 +55,10 @@ public class nonEateries extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.non_eateries, container, false);
+
+        if (getArguments() != null) {
+            shopName = getArguments().getString("FACY");
+        }
         mProgress = new ProgressDialog(getActivity());
         mProgress.setMessage("Loading questionnaire..");
         mProgress.show();
@@ -242,7 +245,7 @@ public class nonEateries extends Fragment {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                VolleyLog.d("eateries.class", "Error: " + error.getMessage());
+                VolleyLog.d("Eateries.class", "Error: " + error.getMessage());
                 Toast.makeText(getActivity().getApplicationContext(),
                         error.getMessage(), Toast.LENGTH_SHORT).show();
                 // hide the progress dialog

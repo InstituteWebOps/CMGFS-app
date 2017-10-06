@@ -12,9 +12,12 @@ import android.util.Log;
 import com.ToxicBakery.viewpager.transforms.RotateUpTransformer;
 
 
-public class reviews extends AppCompatActivity {
+public class Reviews extends AppCompatActivity {
 
     String shopN ;
+    private CustomerReview customerReview = new CustomerReview();
+    private Eateries eateries = new Eateries();
+    private NonEateries nonEateries = new NonEateries();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,7 @@ public class reviews extends AppCompatActivity {
         shopN = i.getStringExtra("facy");
         int type = i.getIntExtra("type", 0);
         Log.v("main", shopN + type);
+        packData();
         ViewPager vpPager = (ViewPager) findViewById(R.id.vpPager);
         if(type == 0){
         FragmentPagerAdapter adapterViewPager = new MyEateriesPagerAdapter(getSupportFragmentManager());
@@ -40,14 +44,14 @@ public class reviews extends AppCompatActivity {
     /*
    SEND DATA TO FRAGMENT (NOT FUNCTIONING)
     */
-    private void sendData() {
+    private void packData() {
         //PACK DATA IN A BUNDLE
         Bundle bundle = new Bundle();
         bundle.putString("FACY", shopN);
         //PASS OVER THE BUNDLE TO OUR FRAGMENT
-        CustomerReview myFragment1 = new CustomerReview();
-        myFragment1.setArguments(bundle);
-
+        customerReview.setArguments(bundle);
+        eateries.setArguments(bundle);
+        nonEateries.setArguments(bundle);
     }
 
     public class MyEateriesPagerAdapter extends FragmentPagerAdapter {
@@ -68,10 +72,9 @@ public class reviews extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    CustomerReview cus = new CustomerReview();
-                    return cus;
+                    return customerReview;
                 case 1:
-                    return new eateries();
+                    return eateries;
                 default:
                     return null;
             }
@@ -109,10 +112,9 @@ public class reviews extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    CustomerReview cus = new CustomerReview();
-                    return cus;
+                    return customerReview;
                 case 1:
-                    return new nonEateries();
+                    return nonEateries;
                 default:
                     return null;
             }

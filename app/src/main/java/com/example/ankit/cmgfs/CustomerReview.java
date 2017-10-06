@@ -41,7 +41,7 @@ import java.util.Map;
 public class CustomerReview extends Fragment {
 
     private static final String QUESTION_URL = "https://polarityreverse.000webhostapp.com/CMGFS/questions.php";
-    private static final String SUBMIT_URL ="https://polarityreverse.000webhostapp.com/CMGFS/customerFeedback.php" ;
+    private static final String SUBMIT_URL = "https://students.iitm.ac.in/studentsapp/cmgfs/customerFeedback.php";
     TextView date, shop, q1 , q2 ,q3, q4,q5, q6,q7,q8,q9,q10,q11,q12,q13, link;
     RatingBar rb1,rb2,rb3,rb4,rb5;
     Switch s1,s2,s3;

@@ -3,6 +3,7 @@ package com.example.ankit.cmgfs;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -36,6 +37,26 @@ public class MainActivity extends AppCompatActivity {
     String facility;
     ProgressDialog mProgress;
     int type;
+    private Boolean exit = false;
+
+    @Override
+    public void onBackPressed() {
+        if (exit) {
+            finish(); // finish activity
+        } else {
+            Toast.makeText(this, "Press Back again to Exit.",
+                    Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                }
+            }, 3 * 1000);
+
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 facility = (String)parent.getItemAtPosition(position);
                 check(facility);
-                Intent intent = new Intent(MainActivity.this , reviews.class);
+                Intent intent = new Intent(MainActivity.this, Reviews.class);
                 intent.putExtra("facy", facility);
                 intent.putExtra("type", type);
                 startActivity(intent);
