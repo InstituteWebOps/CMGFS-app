@@ -45,7 +45,7 @@ public class Eateries extends Fragment {
     Button submit;
     String shopName;
     ProgressDialog mProgress;
-    String url = "https://www.facebook.com/CMGFSIITM";
+    String url_ = "https://www.facebook.com/CMGFSIITM";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -81,7 +81,7 @@ public class Eateries extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
+                intent.setData(Uri.parse(url_));
                 startActivity(intent);
             }
         });
