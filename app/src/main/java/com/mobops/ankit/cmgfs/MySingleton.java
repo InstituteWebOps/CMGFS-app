@@ -1,4 +1,4 @@
-package com.example.ankit.cmgfs;
+package com.mobops.ankit.cmgfs;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -15,9 +15,9 @@ import com.android.volley.toolbox.Volley;
 
 public class MySingleton {
     private static MySingleton mInstance;
+    private static Context mCtx;
     private RequestQueue mRequestQueue;
     private ImageLoader mImageLoader;
-    private static Context mCtx;
 
     private MySingleton(Context context) {
         mCtx = context;

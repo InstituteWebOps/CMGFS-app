@@ -1,4 +1,4 @@
-package com.example.ankit.cmgfs;
+package com.mobops.ankit.cmgfs;
 
 import android.content.Intent;
 import android.os.Bundle;

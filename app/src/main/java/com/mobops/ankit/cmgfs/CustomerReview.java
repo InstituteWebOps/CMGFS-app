@@ -1,6 +1,7 @@
-package com.example.ankit.cmgfs;
+package com.mobops.ankit.cmgfs;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -40,7 +42,7 @@ import java.util.Map;
 
 public class CustomerReview extends Fragment {
 
-    private static final String QUESTION_URL = "https://polarityreverse.000webhostapp.com/CMGFS/questions.php";
+    private static final String QUESTION_URL = "https://students.iitm.ac.in/studentsapp/cmgfs/questions.php";
     private static final String SUBMIT_URL = "https://students.iitm.ac.in/studentsapp/cmgfs/customerFeedback.php";
     TextView date, shop, q1 , q2 ,q3, q4,q5, q6,q7,q8,q9,q10,q11,q12,q13, link;
     RatingBar rb1,rb2,rb3,rb4,rb5;
@@ -162,11 +164,47 @@ public class CustomerReview extends Fragment {
     }
 
     public void submit(){
+        if ((com1.getText().toString() + com2.getText().toString() + com3.getText().toString() + com4.getText().toString() + com5.getText().toString() + com9.getText().toString() + com10.getText().toString() + com11.getText().toString() + com12.getText().toString() + com13.getText().toString()).equals("")) {
+            Toast.makeText(getActivity(), "Empty fields!", Toast.LENGTH_SHORT).show();
+            return;
+        }
         final StringRequest stringStudAddRequest = new StringRequest(Request.Method.POST, SUBMIT_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
                 Toast.makeText(getActivity().getApplicationContext(),"Thanks for your review..", Toast.LENGTH_SHORT).show();
+
+                // Check if no view has focus:
+                View view = getActivity().getCurrentFocus();
+                if (view != null) {
+                    InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                }
+
+                com1.setText("");
+                com2.setText("");
+                com3.setText("");
+                com4.setText("");
+                com5.setText("");
+                com9.setText("");
+                com10.setText("");
+                com11.setText("");
+                com12.setText("");
+                com13.setText("");
+
+                members.setText("");
+                phone.setText("");
+
+                rb1.setRating(3);
+                rb2.setRating(3);
+                rb3.setRating(3);
+                rb4.setRating(3);
+                rb5.setRating(3);
+
+                s1.setChecked(false);
+                s2.setChecked(false);
+                s3.setChecked(false);
+
 
             }
         }, new Response.ErrorListener() {
