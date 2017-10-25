@@ -1,4 +1,4 @@
-package com.mobops.ankit.cmgfs;
+package insti.mobops.ankit.cmgfs;
 
 import android.app.ProgressDialog;
 import android.content.Intent;

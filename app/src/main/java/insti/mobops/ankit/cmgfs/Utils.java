@@ -1,4 +1,4 @@
-package com.mobops.ankit.cmgfs;
+package insti.mobops.ankit.cmgfs;
 
 /**
  * Created by sai_praneeth7777 on 03-Sep-16.
