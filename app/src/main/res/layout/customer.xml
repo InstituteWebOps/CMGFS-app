@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
 
-        android:id="@+id/cus_head"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:padding="8dp">
+        android:background="@android:color/holo_red_light"
+        android:padding="8dp"
+        android:id="@+id/cus_head">
         <TextView
-            android:id="@+id/cus_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date"
+            android:id="@+id/cus_date"
             android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:text="Date"/>
         <TextView
-            android:id="@+id/cus_shop"
-            android:layout_width="180dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:id="@+id/cus_shop"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
             android:text="Shop"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
-
     <ScrollView
-        android:id="@+id/cus_scroll"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cus_head">
+        android:layout_width="match_parent"
+        android:layout_below="@+id/cus_head"
+        android:id="@+id/cus_scroll"
+        xmlns:tools="http://schemas.android.com/tools">
 
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/cus_head"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_below="@+id/cus_head">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -50,9 +53,9 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/cus_col1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cus_col1"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
@@ -70,13 +73,13 @@
                     android:theme="@style/RatingBar" />
 
                 <EditText
-                    android:id="@+id/com1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col1"
-                    android:cursorVisible="false"
+                    android:id="@+id/com1"
                     android:hint="Comment"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:cursorVisible="false"
+                    android:layout_below="@+id/cus_col1"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -85,9 +88,9 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/cus_col2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cus_col2"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
@@ -105,13 +108,13 @@
                     android:theme="@style/RatingBar" />
 
                 <EditText
-                    android:id="@+id/com2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col2"
-                    android:cursorVisible="false"
                     android:hint="Comment"
-                    android:textSize="14sp" />
+                    android:id="@+id/com2"
+                    android:textSize="14sp"
+                    android:cursorVisible="false"
+                    android:layout_below="@+id/cus_col2"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -120,9 +123,9 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/cus_col3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cus_col3"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
@@ -140,13 +143,13 @@
                     android:theme="@style/RatingBar" />
 
                 <EditText
-                    android:id="@+id/com3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col3"
-                    android:cursorVisible="false"
                     android:hint="Comment"
-                    android:textSize="14sp" />
+                    android:id="@+id/com3"
+                    android:textSize="14sp"
+                    android:cursorVisible="false"
+                    android:layout_below="@+id/cus_col3"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -155,9 +158,9 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/cus_col4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cus_col4"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
@@ -175,13 +178,13 @@
                     android:theme="@style/RatingBar" />
 
                 <EditText
-                    android:id="@+id/com4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col4"
-                    android:cursorVisible="false"
                     android:hint="Comment"
-                    android:textSize="14sp" />
+                    android:id="@+id/com4"
+                    android:textSize="14sp"
+                    android:cursorVisible="false"
+                    android:layout_below="@+id/cus_col4"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -190,9 +193,9 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/cus_col5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cus_col5"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
@@ -210,13 +213,13 @@
                     android:theme="@style/RatingBar" />
 
                 <EditText
-                    android:id="@+id/com5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col5"
-                    android:cursorVisible="false"
                     android:hint="Comment"
-                    android:textSize="14sp" />
+                    android:id="@+id/com5"
+                    android:textSize="14sp"
+                    android:cursorVisible="false"
+                    android:layout_below="@+id/cus_col5"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -225,9 +228,9 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/cus_col6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cus_col6"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
@@ -247,9 +250,9 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/cus_col7"
-                    android:layout_width="300dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cus_col7"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
@@ -268,9 +271,9 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/cus_col8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cus_col8"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
@@ -290,21 +293,21 @@
                 android:padding="8dp">
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/cus_col9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
 
                 <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Write"
                     android:id="@+id/com9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col9"
+                    android:textSize="12sp"
                     android:cursorVisible="false"
-                    android:hint="Write"
-                    android:textSize="12sp" />
+                    android:layout_below="@+id/cus_col9"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -313,21 +316,21 @@
                 android:padding="4dp">
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/cus_col10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
 
                 <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Write"
                     android:id="@+id/com10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col10"
+                    android:textSize="12sp"
                     android:cursorVisible="false"
-                    android:hint="Write"
-                    android:textSize="12sp" />
+                    android:layout_below="@+id/cus_col10"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -336,21 +339,21 @@
                 android:padding="4dp">
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/cus_col11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
 
                 <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Write"
                     android:id="@+id/com11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col11"
+                    android:textSize="12sp"
                     android:cursorVisible="false"
-                    android:hint="Write"
-                    android:textSize="12sp" />
+                    android:layout_below="@+id/cus_col11"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -359,21 +362,21 @@
                 android:padding="4dp">
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/cus_col12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
 
                 <EditText
-                    android:id="@+id/com12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col12"
-                    android:cursorVisible="false"
                     android:hint="Write"
-                    android:textSize="12sp" />
+                    android:id="@+id/com12"
+                    android:textSize="12sp"
+                    android:cursorVisible="false"
+                    android:layout_below="@+id/cus_col12"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -382,21 +385,21 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/cus_col13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cus_col13"
                     android:text="How is your life"
                     android:textSize="14sp"/>
 
 
                 <EditText
-                    android:id="@+id/com13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/cus_col13"
-                    android:cursorVisible="false"
                     android:hint="Write"
-                    android:textSize="12sp" />
+                    android:id="@+id/com13"
+                    android:textSize="12sp"
+                    android:cursorVisible="false"
+                    android:layout_below="@+id/cus_col13"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -405,20 +408,20 @@
                 android:paddingTop="50dp">
 
                 <TextView
-                    android:id="@+id/members"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Members"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:id="@+id/members"/>
 
 
                 <EditText
-                    android:id="@+id/members_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/members"
+                    android:id="@+id/members_name"
+                    android:textSize="14sp"
                     android:cursorVisible="false"
-                    android:textSize="14sp" />
+                    android:layout_below="@+id/members"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -427,46 +430,46 @@
                 android:paddingTop="5dp">
 
                 <TextView
-                    android:id="@+id/phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Phone"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:id="@+id/phone"/>
 
 
                 <EditText
-                    android:id="@+id/phone_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/phone"
+                    android:id="@+id/phone_no"
+                    android:textSize="14sp"
                     android:cursorVisible="false"
-                    android:textSize="14sp" />
+                    android:layout_below="@+id/phone"/>
 
                 <TextView
-                    android:id="@+id/t1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/phone_no"
+                    android:id="@+id/t1"
                     android:paddingLeft="10dp"
                     android:text="For online feedback and grievance redress:"/>
                 <TextView
-                    android:id="@+id/fb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/t1"
                     android:paddingLeft="10dp"
+                    android:textColor="@android:color/holo_red_dark"
                     android:text=" https://www.facebook.com/CMGFSIITM"
-                    android:textColor="@android:color/holo_red_dark" />
+                    android:id="@+id/fb"/>
 
             </RelativeLayout>
             <Button
-                android:id="@+id/submit"
+                android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
+                android:text="SUBMIT"
                 android:layout_marginTop="8dp"
-                android:background="@android:color/holo_orange_light"
-                android:text="SUBMIT" />
+                android:id="@+id/submit"
+                android:background="@android:color/holo_orange_light"/>
         </LinearLayout>
 
     </ScrollView>

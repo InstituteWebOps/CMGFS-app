@@ -23,7 +23,7 @@
             android:textSize="18sp"
             android:text="Date"/>
         <TextView
-            android:layout_width="180dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cus_shop"
             android:textSize="18sp"
@@ -54,7 +54,7 @@
                 android:padding="4dp">
 
                 <TextView
-                    android:layout_width="230dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/cus_col1"
                     android:text="How is your life"
