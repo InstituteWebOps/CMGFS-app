@@ -35,8 +35,6 @@ public class Reviews extends AppCompatActivity {
             FragmentPagerAdapter adapterNonViewPager = new MyNonEateriesPagerAdapter(getSupportFragmentManager());
             vpPager.setAdapter(adapterNonViewPager);
         }
-
-        vpPager.setPageTransformer(true, new RotateUpTransformer());
     }
 
 

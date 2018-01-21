@@ -15,7 +15,7 @@
         <activity
             android:name="insti.mobops.ankit.cmgfs.MainActivity"
             android:label="CMGFS App"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name="insti.mobops.ankit.cmgfs.SplashActivity"
@@ -30,7 +30,7 @@
 
         <activity
             android:name="insti.mobops.ankit.cmgfs.Reviews"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
     </application>
 

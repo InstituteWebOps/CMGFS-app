@@ -3,23 +3,23 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="?attr/actionBarSize"
     android:background="@color/colorPrimary"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="56dp">
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_margin="10dp"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
         android:src="@drawable/cmgfs" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="CMGFS App"
         android:textColor="#FFFFFF"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -28,18 +28,20 @@
         android:layout_marginRight="32dp"
         android:gravity="center_horizontal"
         android:text="For Quality Evaluation of Facilities"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp" />
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         android:hint="PASSWORD"
         android:textColor="#FFFFFF"
+        android:textColorHint="@android:color/background_light"
         android:textSize="16sp" />
 
     <Button
@@ -51,7 +53,8 @@
         android:layout_marginRight="32dp"
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
-        android:hint="Log In"
+        android:text="Login"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
 
     <TextView

@@ -7,12 +7,16 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/vpPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp">
 
         <android.support.v4.view.PagerTabStrip
             android:id="@+id/pager_header"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="top" />
+            android:layout_height="40dp"
+            android:layout_gravity="top"
+            android:background="@color/colorPrimary"
+            android:foregroundGravity="center_vertical"
+            android:textColor="@android:color/white" />
     </android.support.v4.view.ViewPager>
 </LinearLayout>

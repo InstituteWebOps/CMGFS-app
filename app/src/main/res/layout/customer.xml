@@ -9,27 +9,28 @@
 
     <RelativeLayout
 
+        android:id="@+id/cus_head"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_red_light"
-        android:padding="8dp"
-        android:id="@+id/cus_head">
+        android:padding="8dp">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/cus_date"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:text="Date"/>
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
             android:id="@+id/cus_shop"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:text="Shop"
             android:textAlignment="center"
-            android:layout_alignParentRight="true"/>
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
     </RelativeLayout>
     <ScrollView
